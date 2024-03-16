@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #bee8f8;
+}
+
+.carousel-container {
+  width: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.card {
+  flex: 0 0 400px;
+  margin-right: 20px;
+  background-color: rgb(248, 248, 214);
+  opacity: 0.9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+  border-color: #e37b7b;
+  border-radius: 20px;
+  opacity: 1;
+}
+.carousel-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.carousel-nav button {
+  background-color: #e37b7b;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.carousel-nav button:hover {
+  background-color: rgb(171, 51, 51);
+}
+input[type="submit"] {
+  background-color: hsl(189, 32%, 52%);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+input[type="submit"]:hover {
+  background-color: #8fb6e3;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+h1 {
+  color: rgb(251, 248, 241);
+  background: linear-gradient(to right, hsl(189, 79%, 76%), rgb(238, 238, 148));
+  opacity: 0.8;
+  padding-top: 1%;
+  padding-left: 1%;
+  border-radius: 10px;
+  font-size: 3.5rem;
+  width: 25%;
+  font-family: serif;
+}
+
+h2 {
+  font-family: "montserrat";
+  color: rgb(112, 108, 108);
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h3 {
+  color: rgb(138, 239, 239);
+  padding-left: 2%;
+  opacity: 80%;
+}
+
+/* 1st container image */
+.section {
+  padding: -30px;
+  height: 700px;
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      rgba(216, 83, 83, 0.6),
+      rgb(120, 152, 212, 0.6)
+    ),
+    url(2017-healthcare-image-it.jpg);
+}
+
+/* navigation bar elements */
+.nav-link {
+  color: hwb(276 96% 2%) !important;
+  font-family: bold;
+  font-size: 1.2rem;
+}
+
+.nav-item {
+  padding-left: 20px;
+}
+
+.collapse {
+  padding-right: 5%;
+}

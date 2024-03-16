@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background-image: url("Sign\ up\ n\ log\ in\ Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pww {
+  position: absolute;
+  top: 85%;
+  left: 85%;
+  transform: translate(-85%, -85%);
+  width: 400px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.pww h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  color: #50d9db;
+  border-bottom: 1px solid #172048;
+}
+
+.pww .signin-details {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.signin-details .txt {
+  position: relative;
+  border-bottom: 2px solid #50d9db;
+  margin: 30px 0;
+}
+
+.txt input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt label {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 5px;
+  color: #172048;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #50d9db;
+  cursor: pointer;
+}
+
+.pass:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #50d9db;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  border-color: #024672;
+  transition: 0.5s;
+}
+
+.signup {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+.signup a {
+  color: #172048;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}

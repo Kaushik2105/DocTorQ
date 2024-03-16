@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Pediatrician</title>
+</head>
+
+<body>
+    <section id="navving">
+        <div class="navco container-fluid bg-info-subtle">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="">
+                    <div class="nav-name">
+                        DocTor<strong>Q</strong>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav ms-auto text-secondary">
+                        <li class="nav-item log">
+                            <a class="nav-link" href="">Doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contact</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <img class="heart-img"
+        src="data:image/jpeg;base64,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"
+        alt="">
+
+    <!-- Details -->
+    <section id="Details">
+        <div class="container-fluid contact-section">
+            <h4><B>Pediatrician</B></h4>
+            <P4>
+                <br>
+                A pediatrician is a medical doctor who specializes in the care of infants, children, and adolescents.
+                They provide medical care and treatment to young patients, typically from birth until the age of 18.
+                Pediatricians are trained to diagnose and treat a wide range of childhood illnesses, injuries, and
+                developmental issues.
+                <br>
+                Here are some key responsibilities and roles of a pediatrician:
+                <ul>
+                    <li>
+                        Routine check-ups: Pediatricians conduct regular well-child visits to monitor the child's growth
+                        and development, administer vaccinations, and provide guidance on nutrition, behavior, and
+                        overall health.
+                    </li>
+                    <li>
+                        Diagnosing and treating illnesses: Pediatricians diagnose and treat common childhood illnesses
+                        such as colds, infections, allergies, and respiratory conditions. They also manage chronic
+                        conditions like asthma, diabetes, and developmental disorders
+                    </li>
+                    <li>
+                        Preventive care: Pediatricians focus on preventive medicine and educate parents and caregivers
+                        about maintaining a healthy lifestyle for their children. This includes discussing safety
+                        measures, injury prevention, and promoting healthy habits.
+
+                    </li>
+                    <li>
+                        Developmental assessments: Pediatricians monitor a child's physical, cognitive, and emotional
+                        development to identify any delays or abnormalities. They may recommend early intervention
+                        services or refer the child to specialists if necessary.
+
+                    </li>
+                    <li>
+                        Immunizations: Pediatricians play a crucial role in administering vaccines to protect children
+                        from various infectious diseases. They follow recommended immunization schedules and educate
+                        parents about vaccine benefits and safety.
+
+                    </li>
+
+                </ul>
+                Pediatricians are committed to providing comprehensive and compassionate care to children, ensuring
+                their overall health and well-being from infancy through adolescence.
+
+            </P4>
+        </div>
+    </section>
+
+    <!--  Card-Section  -->
+    <section id="deho">
+        <h2 class="docard">Pediatrician's Doctors</h2>
+        <center>
+            <section id="search-bar">
+                <div class="group">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                    <input placeholder="Search" type="search" class="input">
+                </div>
+            </section>
+        </center>
+
+
+        <section id="slider-card">
+            <div class="swiper mySwiper container">
+                <div class="swiper-wrapper content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://5bestincity.com/listimg/India/kolkata-wb/Dr-Sumita-Saha-Doctors-Child-Specialist-Pediatrician-Kolkata-West-Bengal.jpg"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">DR. SUMITA SAHA</span>
+                                <span class="profession">Pediatrician</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 2-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://5bestincity.com/listimg/India/kolkata-wb/Dr-Prabhas-Prasun-Giri-Doctors-Child-Specialist-Pediatrician-Kolkata-West-Bengal.jpg"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">DR PRABHAS PRASUN GIRI</span>
+                                <span class="profession">Pediatrician</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 3-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://5bestincity.com/listimg/India/chandigarh-ch/Dr-Gunjan-Baweja-Doctors-Child-Specialist-Pediatrician-Chandigarh-Chandigarh.jpg"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">DR. GUNJAN BAWEJA</span>
+                                <span class="profession">Pediatrician</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card no 4-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://assets.lybrate.com/f_auto,c_limit,w_1920,q_auto/img/documents/doctor/dp/69196605ea81b9bd42ed675a7de9d359/Pediatrics-SandipGupta-Bangalore-47501e.jpg"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Sandip Gupta</span>
+                                <span class="profession">Pediatrician</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 5-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://assets.lybrate.com/f_auto,c_limit,w_1920,q_auto/img/documents/doctor/dp/e3537648e2dea98cf8f6e282343d092b/Pediatrics-RajeshBabu-Bangalore-627629.png"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Rajesh Babu</span>
+                                <span class="profession">Pediatrician</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 6-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 7-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card no 8-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 9-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 10-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="/details-info/index.html">
+                    <h3>About Us</h3>
+                </a>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#testimonials">Doctors</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@springforge.com</li>
+                    <li>Phone: +91 123456789</li>
+                    <li>Address: Kolkata,West Bengal</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-logo">
+            Your Website
+        </div>
+        <p>© 2023 Your Website. All rights reserved. | Designed by <a href="https://www.example.com">SpiralForge</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

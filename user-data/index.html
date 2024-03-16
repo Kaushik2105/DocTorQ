@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="icon" href="/favicon/favicon.ico">
+    <title>Patient Details</title>
+</head>
+<style>
+    body {
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <div class="container mt-3">
+        <table class="table table-dark">
+            <thead>
+                <th>S.no.</th>
+                <th>Name</th>
+                <th>age</th>
+                <th>email</th>
+                <th>Phone no.</th>
+                <th>address</th>
+            </thead>
+            <tbody id="tbody1"></tbody>
+        </table>
+    </div>
+
+    <script type="module">
+        /* imports configurations */
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getFirestore, doc, getDoc, getDocs, onSnapshot, collection } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            // Your Firebase project configuration
+            apiKey: "AIzaSyC5A1JzftcqYMdLuKLvCVKUaceK_hZFGe4",
+            authDomain: "patient-e9843.firebaseapp.com",
+            projectId: "patient-e9843",
+            storageBucket: "patient-e9843.appspot.com",
+            messagingSenderId: "34651306879",
+            appId: "1:34651306879:web:41873e682398c11b91b84a"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        console.log(db);
+
+        // Rest of your code...
+        //this part fills the table 
+        var stdNo = 0;
+        var tbody = document.getElementById('tbody1');
+
+        function AddItemToTable(name, age, email, phone, address) {
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+            var td6 = document.createElement('td');
+
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = name;
+            td3.innerHTML = age;
+            td4.innerHTML = email;
+            td5.innerHTML = phone;
+            td6.innerHTML = address;
+
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+            trow.appendChild(td4);
+            trow.appendChild(td5);
+            trow.appendChild(td6);
+
+            tbody.appendChild(trow);
+        }
+
+        function AddAllItemsToTable(PatientDocsList) {
+            stdNo = 0;
+            tbody.innerHTML = "";
+            PatientDocsList.forEach(element => {
+                console.log(element.name);
+                console.log(element.address);
+                AddItemToTable(element.name, element.age, element.email, element.phone, element.address)
+            });
+        }
+
+        // get all data
+        async function GetAllDataOnce() {
+            try {
+                const querySnapshot = await getDocs(collection(db, "Patient-info"));
+
+                var patients = [];
+
+                querySnapshot.forEach(doc => {
+                    patients.push(doc.data());
+                });
+
+                AddAllItemsToTable(patients);
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        async function GetAllDataRealtime() {
+            try {
+                const dbRef = await getDocs(collection(db, "Patient-info"));
+                let patients = [];
+                console.log(1);
+                console.log(dbRef);
+                dbRef.forEach((doc) => {
+                    console.log(doc.data());
+                    patients.push(doc.data());
+                })
+                AddAllItemsToTable(patients)
+                console.log(3);
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        window.onload = GetAllDataRealtime;
+    </script>
+</body>
+
+</html>

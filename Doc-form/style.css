@@ -1,0 +1,114 @@
+body {
+    background-image: url("Background.png");
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat";
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 85%;
+    left: 85%;
+    transform: translate(-85%, -85%);
+    width: 400px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt {
+    position: relative;
+    border-bottom: 2px solid #50d9db;
+    margin: 30px 0;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: #50d9db;
+    border-bottom: 1px solid #172048;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt label {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 5px;
+    color: #172048;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #45BDBF;
+    cursor: pointer;
+    
+    
+}
+
+.form-group input[type="email"] {
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #45BDBF;
+    cursor: pointer;
+
+}
+
+.form-group textarea {
+    padding: 8px;
+    width: 100%;
+    height: 80px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #45BDBF;
+    cursor: pointer;
+}
+
+
+
+.form-group button[type="submit"] {
+    background-color: #45BDBF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

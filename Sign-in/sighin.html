@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="sighin.css">
+    <title>Sign-in</title>
+</head>
+
+<body>
+    <div class="pww">
+        <h1>Sign in</h1>
+        <div class="signin-details">
+            <div class="txt">
+                <input id="login_email" type="email" required>
+                <label>email</label>
+            </div>
+            <div class="txt">
+                <input id="login_password" type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="txt">
+                <select id="s-opt">
+                    <option value="0">Are you:</option>
+                    <option value="/index.html">A patient</option>
+                    <option value="/doc-view/index.html">A doctor</option>
+                    <option value="3">Exploring our page;)</option>
+                </select>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input id="login" type="submit" value="Login">
+            <div class="signup">
+                Not a member?<a href="signup.html">Signup</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="signin.js"></script>
+</body>
+
+</html>

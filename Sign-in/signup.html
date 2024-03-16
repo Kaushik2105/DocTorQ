@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sighup.css">
+    <title>Sign-up</title>
+</head>
+
+<body>
+    <div class="pww">
+        <h1>Sign Up</h1>
+        <div class="signup-details">
+            <div class="txt">
+                <input id="name" type="text" required>
+                <label>Fullname</label>
+            </div>
+            <div class="txt">
+                <input id="email" type="email" required>
+                <label>Email-id</label>
+            </div>
+            <div class="txt">
+                <input id="phno" type="text" required>
+                <label>Contact Number</label>
+            </div>
+            <div class="txt">
+                <input id="password" type="password" required>
+                <label>Set a password</label>
+            </div>
+            <div class="txt">
+                <input type="password" required>
+                <label>Confirm password</label>
+            </div>
+            <div class="txt">
+                <input type="date" required>
+                <label>Date of Birth:</label>
+            </div>
+            <div class="txt">
+                <select id="s-opt">
+                    <option value="0">Are you:</option>
+                    <option value="/index.html">A patient</option>
+                    <option value="/doc-view/index.html">A doctor</option>
+                    <option value="3">Exploring our page;)</option>
+                </select>
+            </div>
+            <input id="signup" type="submit" value="Continue">
+        </div>
+    </div>
+
+    <script type="module" src="signup.js"></script>
+</body>
+
+</html>

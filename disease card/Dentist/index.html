@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Dentist</title>
+</head>
+
+<body>
+    <section id="navving">
+        <div class="navco container-fluid bg-danger-subtle">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="">
+                    <div class="nav-name">
+                        DocTor<strong>Q</strong>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav ms-auto text-secondary">
+                        <li class="nav-item log">
+                            <a class="nav-link" href="">Doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contact</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <img class="heart-img"
+        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBIUFRUREhIYERISEhIRERERERESEhESGBQZGRgYGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjQrISs0NDQ0MTQ1MTE0ND0xNDQ0NDExNDQ0MTQxNDQxNDQ0NDQxMTQ0NDQ0MTQ0NDQ0NDQ0NP/AABEIAJYBTwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAECAwUGBwj/xAA+EAACAQIEAwUGAwYFBQEAAAABAgADEQQSITEFQVEGE2FxgSIyQpGhsRRiwSNSgtHh8AdykrLCQ1Njc6Iz/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECBAMF/8QAKBEAAgICAgIBAwQDAAAAAAAAAAECEQMxIUEEElEicaEUMmHBE0KR/9oADAMBAAIRAxEAPwDuFeWK8IDKZCphwfd0PTlFLA1o6RzReyKvLFeAuzKbMLSa1ZxfGztvQcGk1aBpUl6NAKCVMleUo0svAQ95XWbSTJg9ZomNDIJaFvKlMuQwQMWWOFkxKq9dUGZjbwjErfCLUUSZcKLk2E5bH8fN7IbDwme+PqN8R8tzFZpj4re+Drn4uoNlF/Ey2jxVTowt4zlcNhar6qunM62l+Npvh1V32LhNNdTt5DSP2eweHHdXydPXXUEQilBsOcyKfyiE04+zLL4OS4jV/av/AJpWrwXGPetU/wDY33k6c7rRllsKGsbJeJBDsNS5yhDUMNDEp2liJGdogIGIPIM0hmiKCkeXK0BR5ejyQQWplqmDqZchgMtEkJBZMQAkI8iJKADxRo8AHijRQAeKKKAHF4fGXLC/um30h9HFzgeC8fpsLZxmZnaxP5jb6WnQUMep5z1JY70Y1I6kOrCxsfODYjA86Zsf3Tsf5QChix1h9HFjYzNPCntHeORx0wNKhBykWI3BhlKpLKyU3Gu/JhuJmJUysVPKYcmNw+xthkU/ubCPLA8BpVgYQrznZdF94O7XMnmlGbeKxpEg0uRoNeUY3HrSUsd+Q6mO6BRcnSCsdxBKQuxuTso3M5PFcQqVX5m+gUcosNRq4upfULf3jsB0ErXjdPDYt8MlE4pFVQHp27xaoHtgljlI8dLEHeJJy2aV6YV8sLwXB6jsAxCGwcg+9lJtf6TcfCYXDJnquFHIt8R6BRqZy/E+JYyvUSogXCmmHWmKbl2Ia18zWCnYabTKxeAxTFndzWbe7uSxHhc6eUqvXSOMsksj+p0vhHVcT7bIilcNTLtawdxkQeIX3j9JyNPj+KrlKVWqaiBsxuqAsw2uQOUymdhmVgQwuLHQiE8Lo5K9jvv6EXB+slyb2dY44xdpHrfBK4aihGthlPmJpIZgdlD+ycdHJHqBNsNofIy1oy5FUmed/ig1ar4VKg+TGaVFxMLsxhxVq16tQkoK9RFRTYs2YkljyABHzndUKNICwpp6qCfmdZqjBuKZjk1Zn0FuZq0UliUKfJAPIkS4Ul5Ejz1g4tCTKma0HZoRVoNy9ryMDfTQ6HxksBiZEmImQYwKHDS+m8DLS2k0liRpI0IQwOk0KQxFBCyQlayYgBMR5ER4ASijRQAlFGigA8UaPADzJuzXCa+tGmVPJ6QqKvodpRR7CsGBXF1ET926sbeZ2nTJZRZQBbkJHvSfOb4pxfDZnck9otwfC6dMAauRzbUmF4juwpJsumhGhBgiYojQ6iU4+pZC6E5hYgXsb36xv2fLEqKMBjw7BKZLMegOnmeUtx3DcWz5lVCtgBZwD63g1LiVca2f0NM/eEJxrEDdH9adNv8Aa0z5ozmqaO2OcYu0xkw+JX3qTealW+xhKYhh7yMvmplC9pm+IZdbftMNXT62hFDj7trkRh/nZfuJklhcd2jTHP7dWXLilPOJXifi6n3qCt5VEY/IgTOfHqWOXC1E13SpTsf4dRI9P5LWS+jQepYEnkJwfaTjBuSNWNxTX9T4Tp8fVOUglk0+NAB80dj9JxtXg9Z3NQMlTMbKFcKcvIBXysfQGJps7Y5xXN8mdhOJ4wAomIqDPZCqtlBvpYAe76WnV4HhAoIoC3LD9o/Mt18hyHrvMOnhTQqJ3qtTIdSVdShIvuARrPTRhVdLWvpoY0m0ROaUl2jBbDsTe2g2tr8zzhVKkG1mlhqNxbpcHzleIy0XS4ulS4NtSpFrG3SOuznKTk67OX7ZcHXu/wAQos9Oxa3NM6qR83B9PGcgnEG72m5FiiJTa2pYKMt7dbW+U73tVj0qD8PT1uvteALA69NVHyM82xuFqUaqq+zG6sNjaKcaOuGf+rPVeyfGcOVZO9VXJuEc5G26NadK1UBW1GoOXUa6TheH1af4d2emlSwGlRFcXItz85DB8KCrehXqUj0D5k/0HSdcOJzjfRHkyUJU9szuA4LF4V3Faiy06jFw6lXQHW9ypNtOvSdWnEVA1M5/iWKxaKyVAlZSLBwGpsPPKbfSF9kcKlVe8qKxNNigVqmdMw1BtbXS2/Wbov1Si0zDKN8po6fAvUfULlXkzXF/Ic4ZVBRS7EWUXNr6DrLqQlwF9DqDoQeYkSlyTQLRrfM6+XhLWytowB+/zmQBUpsyMpYA+yw9rMvI2Gssp4rMSDoBoQRa56eX9OsbinoE2gmpgQ2tNvRtvQzNxNN099SOh3B9ZrJWHmdgB1hKG4s1iDuCLi36znKBSkcvmhNBoZxHhIsXpDbVk306r/KZlB7TjJUUjWpGF04DQa8OpxFF6yYkFkwYASEeMI8AHjxrRWgA94rxWjQAV4rxjGvADjmfrp0YbesbvOuh68jJFfUfSUOhXUarzU/oeU9RUY3Za7ZRc6DrygLYxHORiUF9DyMyuLXq+wjlU3tyY+I5zGfhtZT7Oa35Ha3yvOkca7ZEpfB29MMuoOYdRCqVeef4bE4yibhmZb6pU1+XMTew3GHPvU7Hwb+kUsbGpo6rvQYIEGY2639ZmpiarglVsAddySPCaOEOk83zH61Gv5N/iRu3YUlOELRjU4QJhRrbMvieCzo6D40Zb9Lgied4ZGW66qykqw1FmGhBnqzLec9xrgwc97TUd4QQyMSq1Omo2bofnG0dMbWmcotckZWOYD4HAdfMK15v8E7QPTXu3N1FwjvmOXoGtrp/dph1VX3TdGHvKws6MALgje0gjAb7+ekakzo8MZdHXYLHsmZhWRs7FjeomhPS50leN4pcEhxnI98EVPQbAf3pOOq1QpGsatjwqkk62+UalQn49u2/6Nrh2IpMWQ+1VLb82Ntz6SPG+HGrTbQB09pBbW4nE4DHOtUvexz5l8p3+D4kGS+ubILm3xQUumcZY6dx0c7g8ayoisbK5VX8joZv0sQaTtSZrlDbMOY5Gc/xlAq6aa30kcd3rV3qoCU7umzka5bganwmjxZuLp6YeZj9op9nWvWZhutjzJuDN7geDyUwLWJOcgaAk9ZxnAaprOtPUE6vzUqN/wC/Gek0AALCb8kqVI8uKL6adNPCXqJWhlqzMyzl+0fEWo10/dqU9vzKx2+Yk8P2gouBTdG9nLeyd4LkXvpcjfeZ/bygXamAL+y+l7Dcbnf5TzvGYp0OSo2dSwYMtsy5WvYkbj+9Z2j46lFSsj/LT9aPYsNicMT+zcAnlnN/k20PReYa/wBfqJxHCsGHRSKjWIBvfMD6G4mmnD66e5UB88yf7Tb6SJY2nsakvg6tGtMXiWByvmQey2unwnmIMmKxSe8ucX/K+nXkRNGjj3tdqTW6pczlKEi4yQDQYiaVCpEMTSbfQ/nSx+ctSih1X/5a85OLWy0y1TLAJSEtzlytEMmBJCRBigBaIxMhmiMBEiZAtGMa0BiLRiY9o0AOUK89vEag+YmHxfi1JW7gvlewLZTew8ZqY3FBFJF8x0UciZwWO4Y9RjUYkuTmLc7z04xk1a/JjuK2b1F/iUh06qbr/QzQouh2NvtONwzVKbWJKtsGGmbwM3MNjCfeAv1Gh/lOb8pRfrkVP8HT9O5L2g7X5N80VPvKG9JbSwdO18t/PlM/D129OkPp1D0lLPCWpIl4ZLaDqVNRoBYSNGn025SCMx0uVuLXvCqSWAHQATF5c4ySSds1+NGUW20WIIQplIlizGamTMprU8wt/YlsUYk6ON49gg+lQZGAslRLBwP+Q8D9Jy+IwdZNiKo6qQGHmp/S89PxmEV1KkevSchxDhroTvbkeRkyRvw5Iy4ezjaj1f8Atvpp7jj9JUmErObmm9umVvqZ1C1GU6jY3hacSUasNbHaJI6Sx32YvD+ytV2U1Bkp88pUufAch6zexr06ICjKuUeygN9RzYncwPFcdYCyn+c53F4l3PUnnKolY1HllmPrNUa29z9zOywOHUrVpkle8opSzLa40tcTmOG4PKQ7ctQDuTNqviMiltdbDTfXSd8STkk/kxeVO7rpG12b4WtKo7KS6lEVHYANzzA28QJ19ITkuxzEox/8hAufATrqU35eGzyY6LgJNWtGEecSzl+21JrI4HsWZHYbgkiw8L9ZwPFMKrDQcuWwHICeyVKaspRgGVhYqdQROH472YdLvRBqUzrk3dB/yH1mnDlSXqzlKPNmb2Mx1k7pjrT0/g3H8vSd3h2vrynn3ZjCn8QxsdEtbxLDf5T0LDJ19BDNSY4hIUGXURaQQS0TO2dBquHVtSoPpB2wa8rr5GGjaVuZxbafBSpgndVB7r38DJB6g3UN5RM8mjwu9jIjFDmCvpLUxCnZhKqiyg25gHzEngOTTFrXvvtFBMO6jb73tCwbxDFFaIxgYDFaMRJRoAeP0OMJil71GNlNmRrZk8xDsNZp5Pw7iD0HFRDrsyn3XXmrCehcD4vTrC6GzfEhPtIeniOhnp4cqmq7MeSDi76NrE8PV12gC4ZkNm25N1m7hnuJOrhwwKkaH6SM+FZY130XhyuDvoBw00KTQBUKtlPz6w1Gniyi4uns9SMlJWg6k8KRpmI8LpVIWOg9TJAyhGkwZSE0EKYxkFaWGMRC8hVpKwsRcHrLCJExjsxsTwOm3ui3gdRMbE8Abladg8ErmJpHaOeSOLqcAPxEASH4GmmoFyOZm5jGJNoAaB3MlDlllLYKiEmVcbuKem91P1mklO0pxeENZkpLf23UEjcLmFz8rztB/UvuZp6Z03ZLDlcOhPx3e1rEXOk6WkkGwdEIqqNlAUeQEMUzdKVswJFwERESmOZzGRjRzFGBQcLTLZ8i5joWAAY+ssCAbScaFsBASQkY4MQyxZXiE0uPWSUyRMlqwTM0iWBo+WRZDJAl3kfIDBXBEtpPFQ7GZCJOnXtLCbyl6cljQWtS8sSAobQhKwgUERRlcGPAD5KluGrvTYOjFWXYj7HqJTJASk2naE1Z6X2a7SU6wCOQlUaFSbBvFTz8p2VFwRrPB8M1mnfcA4jUygd42mlib/ed/wBWkvqX/DmsF6Z23EUFlI3v9LSimYPh6jPqzEnxhqJMGbIpy9kbcUHGNMkBLENowSSAnM6BVOpCFMBVoRTeCBhIMtRoOrSYMqxUERmWVh5NXjEVPBKwhzwWqIMaMqrTgzpNGqsp7q8kqwQU5o8KwwVyx3tp4Siu6UkapUYIiAszHYCVdj+InEI9cjKr1GFMHcU10F/qfWaMEblfwZ80qjR11Iy9TBqZl6zWzGi1TJ3lQkgZJRO8eQvHvACUaNePABRRRQAe8e8jHEQFC7keJlpUSnEHK1+TfeQNaQxj1FlYFog95aEiArLxK94705SFIiooKVbyL0zJUzLxE0AEtUrCqWIBldSkDB2pkRDPl2SWRkhGBJDYidZwOpYjxnJW5zpODtsZE9HTHs9BwBvNVJh8LfQTcpnSZzSEIsmEkacuUQoCvu44p2l4EVoUKysXlgqRESLLAZar3j5oKRHVj1hYqCc0rcS+iIbSUdJS5E3RkdxflMPjXaXC4UmmxNSqP+mm4/zHYTuQBPEv8RcPlxjNydQfUXlRSuiJSdcGL2l7RV8W1nOSkpulJCco8T+8Z6p2Gwvd4Sgp0LJnPm2s8aWhnZVG7sq/M2nv3D6QREQbKiqPQTdiVIyzd7NGnL1lNOXCWzmWCPGEUQyUeRjyQHjyMeADx4wjwAUeNFAZRxD/APNjzWzD5/1MxxXvNLitcKhBOrkKPuftMdBOcnRSD8K80kImQjWhlOvEhhj2gzCWI95Pu4ElSmWB4iglbiFAXK8mVBgqPCFaQykfKVopIRiIxk1W83eCNymIgm3wYayJ6Lx/uO74XsJvUzMThY0E26UymoLpQlBBqUKSWhMmBHyRCWCUIrKyDCXmVNFQFLLEimWGJBJodhGHWHUxB6IhAMtEMmJ59/iJwjvbOo9pRPQVmZxTDhgQYMEeI9nsITi6KMNqgJ/h1/Se3UJx+H4KExSVQNs31E7GjN2F3GzJlVSoKSXLKacuWdGcyYjxhHEQx4oopIDxRo8AHjyMeADxmYAEk2A1JOwEU43/ABF433NIYZDapXBz23WkN/8AUdPLNADG4n2m/EVyUP7NCUp/mW+r+v2tN7huJzKJ5Xh6+VgeV52vCsdoCDOUt2WtHU4h7bR6FaBd9mF5Fa3KJCNyjiIYuImRQFxeXF7QTKNFsQIM+IgVSvII5MbdCXJoUnvDUMBoCFqZzspI+XgImG0UUoCdMaze4QvtfKKKc8mjrj2dzwwbTcpiKKZ0aAqkISsUUpCLlk1iilIkcyLCKKAEYw3iiklIKpmXAxRSiWWIZXWW8UUYjLr0gGvCKUUU2YP2mXNsJSXrFFOrORMR4oohjxRRQAUUUUkB4oooAKeH9oce2JxFWs2l2KKp+FF0A/XzJiig9B2YzHlNjhGLYaRopyZaOx4fXuIRSF2iikMZv4cWWUYhoooIGU7wmisUUJDQcgl6mKKSM//Z"
+        alt="">
+
+    <!-- Details -->
+    <section id="Details">
+        <div class="container-fluid contact-section">
+            <h4><B>Dentist</B></h4>
+            <P4>
+                <br>
+                A dentist is a healthcare professional who specializes in the diagnosis, prevention, and treatment
+                of
+                oral health conditions. They focus on the overall well-being of the teeth, gums, and mouth. Dentists
+                play a crucial role in maintaining good oral health and preventing dental problems.
+                <br>
+
+                Here is an overview of the work dentists typically do:
+                <ul>
+                    <li>
+                        Preventive Dentistry: Dentists emphasize the importance of regular dental check-ups and
+                        cleanings to prevent oral health problems. They educate patients on proper oral hygiene
+                        practices, including brushing, flossing, and a healthy diet. Dentists may also perform
+                        dental
+                        sealants and fluoride treatments to protect teeth from decay.</li>
+                    <li>Dental Examinations: Dentists perform comprehensive examinations of patients' mouths to
+                        assess
+                        their oral health. They check for signs of tooth decay, gum disease, oral cancer, and other
+                        dental conditions. X-rays and other diagnostic tools are often used to aid in the evaluation
+                        process.</li>
+                    <li>Restorative Dentistry: Dentists restore damaged or missing teeth to improve both function
+                        and
+                        aesthetics. They may perform procedures such as dental fillings, crowns, bridges, and dental
+                        implants. Restorative dentistry aims to repair tooth structure, improve chewing ability, and
+                        enhance the appearance of the smile.</li>
+                    <li>Endodontics: Dentists specialize in root canal therapy, which involves treating infected or
+                        damaged tooth pulp. They remove the infected tissue, clean and disinfect the root canal, and
+                        seal it to prevent further infection. Endodontists are dentists with advanced training in
+                        root
+                        canal procedures.</li>
+                    <li>
+                        Oral Surgery: Dentists may perform oral surgical procedures, such as tooth extractions,
+                        including wisdom teeth removal. They may also treat dental injuries and jaw disorders.</li>
+                </ul>
+                Overall, dentists are essential in promoting and maintaining good oral health for patients of all
+                ages,
+                ensuring healthy teeth, gums, and a confident smile.
+            </P4>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br>
+
+    <!--  Card-Section  -->
+    <section id="deho">
+        <h2 class="docard">Dentist Doctor's</h2>
+        <center>
+            <section id="search-bar">
+                <div class="group">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                    <input placeholder="Search" type="search" class="input">
+                </div>
+            </section>
+        </center>
+        <section id="slider-card">
+            <div class="swiper mySwiper container">
+                <div class="swiper-wrapper content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://www.sakraworldhospital.com/doctor-images/dr-balasubramanya-best-dental-doctor-in-bangalore.png"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Balasubramanya K.V</span>
+                                <span class="profession">Dentist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 2-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://www.sakraworldhospital.com/doctor-images/dr-ramya-best-dental-doctor-bangalore.png"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Ramya</span>
+                                <span class="profession">Dentist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 3-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://www.sakraworldhospital.com/doctor-images/Dr.Deepak%20(222_250).png"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Deepak Pathak</span>
+                                <span class="profession">Dentist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card no 4-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://www.sakraworldhospital.com/doctor-images/orthodontist-and-dentofacial-orthopaedic-surgeon.png"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Swati Vishwakarma</span>
+                                <span class="profession">Dentist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 5-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="https://imagesx.practo.com/providers/dr-pramod-orthodontist-bangalore-a07efee4-b1d5-4e84-8c62-c78d0af9ef47.jpg?i_type=t_100x100-2x"
+                                    alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. Pramod</span>
+                                <span class="profession">Dentist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 6-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 7-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card no 8-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 9-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card no 10-->
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="images/card-sec-img.webp" alt="Doctor's image">
+                            </div>
+                            <div class="media-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="name-profession">
+                                <span class="name">Dr. XYZ</span>
+                                <span class="profession">Cardiologist</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="fas fa-solid fa-star"></i>
+                                <i class="far fa-solid fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                                <i class="far fa-light fa-star"></i>
+                            </div>
+                            <div class="button">
+                                <button class="aboutMe">About</button>
+                                <a href="/Booking/booking.html"><button class="hireMe">Book Doctor</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="/details-info/index.html">
+                    <h3>About Us</h3>
+                </a>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#testimonials">Doctors</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@springforge.com</li>
+                    <li>Phone: +91 123456789</li>
+                    <li>Address: Kolkata,West Bengal</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-logo">
+            Your Website
+        </div>
+        <p>© 2023 Your Website. All rights reserved. | Designed by <a href="https://www.example.com">SpiralForge</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
